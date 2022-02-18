@@ -6,8 +6,7 @@ const Layout: React.FC = ({ children }) => {
         <>
             <Navbar />
             <section className="flex bg-gray-100">
-                <div className="w-full md:w-11/12 h-full">
-                    {/* All Children pass from here */}
+                <div className="w-full h-full">
                     {children}
                 </div>
             </section>
