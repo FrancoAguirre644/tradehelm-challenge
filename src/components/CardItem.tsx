@@ -7,7 +7,7 @@ interface IProps {
 
 const CardItem: React.FC<IProps> = ({ item, deleteItem }) => {
     return (
-        <div className="flex justify-between my-3 p-3 border-2 border-gray-200 rounded">
+        <div className="flex justify-between my-3 p-3 border-2 border-gray-200 dark:text-white rounded">
             <div>
                 {item.description}
             </div>

@@ -1,11 +1,14 @@
 import './App.css';
-import Loading from './components/Loading';
+import useDarkMode from './hooks/useDarkMode';
 import Layout from './layouts/Layout';
 import HomePage from './pages/HomePage';
 
 function App() {
+
+  useDarkMode();
+
   return (
-    <div className="App">
+    <div className='h-screen dark:bg-black'>
       <Layout>
         <HomePage />
       </Layout>

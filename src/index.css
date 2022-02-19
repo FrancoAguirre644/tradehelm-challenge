@@ -20,7 +20,6 @@ code {
 .loading_container{
   width: 100%;
   height: 100vh;
-  background: rgba(233, 229, 229, 0.467);
   position: fixed;
   top:0;
   left: 0;

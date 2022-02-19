@@ -3,7 +3,7 @@ import { Item } from '../../models/models';
 import { IItemType, CREATE_ITEM, GET_ITEMS, DELETE_ITEM } from '../types/itemType';
 import { IChangeLoadingStatus, LOADING } from '../types/loadingType';
 
-export const createItem = (item: Item) => async (dispatch: Dispatch<IItemType | IChangeLoadingStatus>) => {
+export const createItem = (item: Item) => (dispatch: Dispatch<IItemType | IChangeLoadingStatus>) => {
     try {
 
         dispatch({ type: LOADING, payload: true });
@@ -24,14 +24,16 @@ export const createItem = (item: Item) => async (dispatch: Dispatch<IItemType | 
     }
 }
 
-export const getItems = () => async (dispatch: Dispatch<IItemType | IChangeLoadingStatus>) => {
+export const getItems = () => (dispatch: Dispatch<IItemType | IChangeLoadingStatus>) => {
     try {
 
         dispatch({ type: LOADING, payload: true });
 
+        const items = JSON.parse(localStorage.getItem('items')!) || [];
+        
         dispatch({
             type: GET_ITEMS,
-            payload: []
+            payload: items
         })
 
         dispatch({ type: LOADING, payload: false });
@@ -41,7 +43,7 @@ export const getItems = () => async (dispatch: Dispatch<IItemType | IChangeLoadi
     }
 }
 
-export const deleteItem = (id: number) => async (dispatch: Dispatch<IItemType | IChangeLoadingStatus>) => {
+export const deleteItem = (id: number) => (dispatch: Dispatch<IItemType | IChangeLoadingStatus>) => {
     try {
 
         dispatch({ type: LOADING, payload: true });
