@@ -1,12 +1,14 @@
-export const Navbar = () => {
+export const Navbar: React.FC = () => {
+
+    //const { theme } = useSelector((state: RootStore) => state);
+
+    //const dispatch = useDispatch();
 
     return (
         <>
-            <nav className="sticky z-10 flex items-center shadow-md justify-between px-4 py-4 md:px-8 top-0 w-full bg-white">
-
+            <nav className={'sticky z-10 flex items-center shadow-md justify-between px-4 py-4 md:px-8 top-0 w-full bg-white'}>
                 <div className="hidden lg:block">
-                    <span
-                        style={{ letterSpacing: "0.70rem" }}
+                    <span style={{ letterSpacing: "0.70rem" }}
                         className="flex items-left text-center font-bold uppercase text-gray-800 text-2xl cursor-pointer px-2"
                     >
                         Supermarket App
@@ -14,8 +16,7 @@ export const Navbar = () => {
                 </div>
                 {/* Small Screen Show */}
                 <div className="lg:hidden flex items-center">
-                    <span
-                        style={{ letterSpacing: "0.10rem" }}
+                    <span style={{ letterSpacing: "0.10rem" }}
                         className="flex items-left text-center font-bold uppercase text-gray-800 text-2xl cursor-pointer px-2"
                     >
                         Supermarket App
@@ -46,4 +47,4 @@ export const Navbar = () => {
         </>
     );
 };
-      
+

@@ -19,4 +19,4 @@ export interface IDeleteItem {
     payload: number;
 }
 
-export type IitemType = ICreateitem | IGetItems | IDeleteItem;
+export type IItemType = ICreateitem | IGetItems | IDeleteItem;

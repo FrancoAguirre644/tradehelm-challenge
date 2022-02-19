@@ -1,12 +1,15 @@
 import './App.css';
+import Loading from './components/Loading';
 import Layout from './layouts/Layout';
 import HomePage from './pages/HomePage';
 
 function App() {
   return (
-    <Layout>
-      <HomePage/>
-    </Layout>
+    <div className="App">
+      <Layout>
+        <HomePage />
+      </Layout>
+    </div>
   );
 }
 

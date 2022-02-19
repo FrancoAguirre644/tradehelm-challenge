@@ -1,26 +1,9 @@
 import { Item } from "../../models/models";
 import * as types from "../types/itemType";
 
-const initialState: Item[] = [
-    {
-        id: 1,
-        description: '#Product 1'
-    },
-    {
-        id: 2,
-        description: '#Product 2'
-    },
-    {
-        id: 3,
-        description: '#Product 3'
-    },
-    {
-        id: 4,
-        description: '#Product 4'
-    }
-];
+const initialState: Item[] = [];
 
-const categoryReducer = (state: Item[] = initialState, action: types.IitemType): Item[] => {
+const itemReducer = (state: Item[] = initialState, action: types.IItemType): Item[] => {
     switch (action.type) {
         case types.CREATE_ITEM:
             return [action.payload, ...state];
@@ -36,4 +19,4 @@ const categoryReducer = (state: Item[] = initialState, action: types.IitemType):
     }
 }
 
-export default categoryReducer;
+export default itemReducer;
